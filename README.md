@@ -13,3 +13,11 @@ and I here [https://github.com/addyosmani/jquery-plugin-patterns/issues/1] and m
 the UMD patterns proposed by JR Burke here [https://gist.github.com/1262861]. The latter of these
 patterns will likely form the basis of the UMD we recommend actually using in production and 
 more details about any proposed patterns will be documented as they're finalized.
+
+###Todos
+<ul>
+<li>Usage examples</li>
+<li>Wiki (or code samples) with variations better suited to say, jQuery/Framework modules</li>
+<li>Further justifications for usage</li>
+<li>Gotchas/custom-tweaks we're aware of, but would rather not apply to the default UMD boilerplate</li>
+</ul>
