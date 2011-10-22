@@ -8,8 +8,8 @@ amongst others), and in many cases uses AMD as a base, with special-casing added
 CJS compatability.
 
 To date, a number of UMD variations have been proposed, ranging from Kit-Cambridge's UMD at
-[https://gist.github.com/1251221], through to patterns discussed by Thomas Davis, Ryan Florence
-and I here [https://github.com/addyosmani/jquery-plugin-patterns/issues/1] and most recently
+[https://gist.github.com/1251221], through to patterns discussed by Addy Osmani, Thomas Davis and Ryan Florence
+and here [https://github.com/addyosmani/jquery-plugin-patterns/issues/1] and most recently
 the UMD patterns proposed by JR Burke here [https://gist.github.com/1262861]. The latter of these
 patterns will likely form the basis of the UMD we recommend actually using in production and 
 more details about any proposed patterns will be documented as they're finalized.
