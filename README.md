@@ -38,12 +38,20 @@ more details about any proposed patterns will be documented as they're finalized
 ####AMD with simple Node/CommonJS adapter
 
 These are useful for using AMD style while still making modules that can be
-used in Node and installed via npm.
+used in Node and installed via npm without extra dependencies to set up the
+full AMD API.
+
+This approach does not allow the use of [AMD loader plugins](https://github.com/amdjs/amdjs-api/wiki/Loader-Plugins),
+just basic JS module dependencies. It also does not support the
+[callback-style require](https://github.com/amdjs/amdjs-api/wiki/require) that
+is usable in AMD.
 
 * [nodeAdapter.js](https://github.com/umdjs/umd/blob/master/nodeAdapter.js) -
-  Best for use with Node.
+  Best for when using AMD style but want it to work in Node without a helper library
+  that sets up AMD.
 * [commonjsAdapter.js](https://github.com/umdjs/umd/blob/master/commonjsAdapter.js) -
-  Compatible with more CommonJS runtimes, and if you want to define a circular dependency.
+  Similar to nodeAdapter.js, but compatible with more CommonJS runtimes, and if
+  you want to define a circular dependency.
 
 
 ###Todos
