@@ -1,29 +1,59 @@
 ##UMD (Universal Module Definition)
 
 The purpose of this repository is to centralize the information and work currently being done
-by a group in the community on UMD patterns. UMDs typically attempt to define modules which 
-can work anywhere, be in in the client, on the server or anywhere else. This pattern typically 
-attempts to offer compatibility with the most popular script loaders of the day (e.g RequireJS 
-amongst others), and in many cases uses AMD as a base, with special-casing added to handle 
+by a group in the community on UMD patterns. UMDs typically attempt to define modules which
+can work anywhere, be in in the client, on the server or anywhere else. This pattern typically
+attempts to offer compatibility with the most popular script loaders of the day (e.g RequireJS
+amongst others), and in many cases uses AMD as a base, with special-casing added to handle
 CJS compatability.
 
 To date, a number of UMD variations have been proposed, ranging from Kit-Cambridge's UMD at
 [https://gist.github.com/1251221], through to patterns discussed by Addy Osmani, Thomas Davis and Ryan Florence
 and here [https://github.com/addyosmani/jquery-plugin-patterns/issues/1] and most recently
 the UMD patterns proposed by JR Burke here [https://gist.github.com/1262861]. The latter of these
-patterns will likely form the basis of the UMD we recommend actually using in production and 
+patterns will likely form the basis of the UMD we recommend actually using in production and
 more details about any proposed patterns will be documented as they're finalized.
 
+
+###Variations
+
+####Regular Module
+
+* [returnExports.js](https://github.com/umdjs/umd/blob/master/returnExports.js) -
+  Defines a module that works in Node, AMD and browser globals.
+* [commonjsStrict.js](https://github.com/umdjs/umd/blob/master/commonjsStrict.js) -
+  Defines a module that works with more CommonJS runtimes, and for modules that
+  will have a circular dependency.
+
+####jQuery Plugin
+
+* [jqueryPlugin.js](https://github.com/umdjs/umd/blob/master/jqueryPlugin.js) -
+  Defines a jQuery plugin that works with AMD and browser globals.
+* [jqueryPluginCommonjs.js](https://github.com/umdjs/umd/blob/master/jqueryPluginCommonjs.js) -
+  Defines a jQuery plugin that works with AMD and browser globals, but also in
+  a CommonJS environment. However, jQuery is unlikely to run in most CommonJS
+  environments, so only use this version if you know you are targeting a CommonJS
+  environment that can load jQuery appropriately.
+
+####AMD with simple Node/CommonJS adapter
+
+These are useful for using AMD style while still making modules that can be
+used in Node and installed via npm.
+
+* [nodeAdapter.js](https://github.com/umdjs/umd/blob/master/nodeAdapter.js) -
+  Best for use with Node.
+* [commonjsAdapter.js](https://github.com/umdjs/umd/blob/master/commonjsAdapter.js) -
+  Compatible with more CommonJS runtimes, and if you want to define a circular dependency.
+
+
 ###Todos
-<ul>
-<li>Variations</li>
-<ul>
-<li>Varition with return/module.exports.</li>
-<li>Variation for people who have circular dependencies/want more commonjs compatibility.</li>
-<li>Variation noConflict. Although with AMD loaders and build tools, it should be possible to get version specific bindings.</li>
-<li>Variation with attaching some functionality to a $ impersonator. Although, it is tempting to say for that case, ask for 'jquery' as a dependency, and if the developer wants to use something different than the actual 'jquery', map that file to the 'jquery' name. That is one of the strengths of module names, they can be mapped to different implementations.</li>
-</ul>
-<li>Usage examples</li>
-<li>Further justifications for usage</li>
-<li>Gotchas/custom-tweaks we're aware of, but would rather not apply to the default UMD boilerplate</li>
-</ul>
+
+* noConflict. Although with AMD loaders and build tools, it should be possible to get version specific bindings,
+  maybe show a version that has a noConflict option.
+* Variation with attaching some functionality to a $ impersonator. Although, it is
+tempting to say for that case, ask for 'jquery' as a dependency, and if the developer
+wants to use something different than the actual 'jquery', map that file to the 'jquery' name.
+That is one of the strengths of module names, they can be mapped to different implementations.
+* Usage examples
+    * Further justifications for usage
+    * Gotchas/custom-tweaks we're aware of, but would rather not apply to the default UMD boilerplate
