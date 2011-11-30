@@ -19,6 +19,8 @@ more details about any proposed patterns will be documented as they're finalized
 
 ####Regular Module
 
+* [amdWeb.js](https://github.com/umdjs/umd/blob/master/amdWeb.js) -
+  Defines a module that works with AMD and browser globals.
 * [returnExports.js](https://github.com/umdjs/umd/blob/master/returnExports.js) -
   Defines a module that works in Node, AMD and browser globals.
 * [commonjsStrict.js](https://github.com/umdjs/umd/blob/master/commonjsStrict.js) -
