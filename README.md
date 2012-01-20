@@ -20,12 +20,21 @@ more details about any proposed patterns will be documented as they're finalized
 ####Regular Module
 
 * [amdWeb.js](https://github.com/umdjs/umd/blob/master/amdWeb.js) -
-  Defines a module that works with AMD and browser globals.
+  Defines a module that works with AMD and browser globals. If you also want
+  to export a global even when AMD is in play (useful if you are loading other
+  scripts that still expect that global), use
+  [amdWebGlobal.js](https://github.com/umdjs/umd/blob/master/amdWebGlobal.js).
 * [returnExports.js](https://github.com/umdjs/umd/blob/master/returnExports.js) -
-  Defines a module that works in Node, AMD and browser globals.
+  Defines a module that works in Node, AMD and browser globals. If you also want
+  to export a global even when AMD is in play (useful if you are loading other
+  scripts that still expect that global), use
+  [returnExportsGlobal.js](https://github.com/umdjs/umd/blob/master/returnExportsGlobal.js).
 * [commonjsStrict.js](https://github.com/umdjs/umd/blob/master/commonjsStrict.js) -
   Defines a module that works with more CommonJS runtimes, and for modules that
-  will have a circular dependency.
+  will have a circular dependency. If you also want
+  to export a global even when AMD is in play (useful if you are loading other
+  scripts that still expect that global), use
+  [commonjsStrictGlobal.js](https://github.com/umdjs/umd/blob/master/commonjsStrictGlobal.js)
 
 ####jQuery Plugin
 
