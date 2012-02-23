@@ -24,7 +24,8 @@
         // AMD. Register as an anonymous module.
         define(['b'], factory);
     } else {
-        // Browser globals
+        // Browser globals. If returnExports string is not a valid JS identifier,
+        // eg return-exports, use root['return-exports']
         root.returnExports = factory(root.b);
     }
 }(this, function (b) {
