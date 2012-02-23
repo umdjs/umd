@@ -25,7 +25,8 @@
         define(['b'], factory);
     } else {
         // Browser globals
-        root.returnExports = factory(root.b);
+        var projectName = root.projectName || {};
+        projectName.returnExports = factory(root.b);
     }
 }(this, function (b) {
     //use b in some fashion.
