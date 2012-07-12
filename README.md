@@ -76,3 +76,7 @@ That is one of the strengths of module names, they can be mapped to different im
 * Usage examples
     * Further justifications for usage
     * Gotchas/custom-tweaks we're aware of, but would rather not apply to the default UMD boilerplate
+
+###Influences
+
+The basic pattern for these UMD variations was derived from the approach [@kriskowal](https://github.com/kriskowal) used for the [Q promise library](https://github.com/kriskowal/q).
