@@ -23,7 +23,7 @@
     } else if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
         define(['exports', 'b'], function (exports, b) {
-            return (root.commonJsStrictGlobal = factory(exports, b));
+            factory((root.commonJsStrictGlobal = exports), b);
         });
     } else {
         // Browser globals
