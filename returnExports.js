@@ -10,19 +10,15 @@
 // If the 'b' module also uses this type of boilerplate, then
 // in the browser, it will create a global .b that is used below.
 
-// If you do not want to support the browser global path, then you
-// can remove the `root` use and the passing `this` as the first arg to
-// the top function.
-
 (function (root, factory) {
-    if (typeof exports === 'object') {
+    if (typeof root.module === 'object' && root.module.exports) {
         // Node. Does not work with strict CommonJS, but
         // only CommonJS-like enviroments that support module.exports,
         // like Node.
-        module.exports = factory(require('b'));
-    } else if (typeof define === 'function' && define.amd) {
+        root.module.exports = factory(require('b'));
+    } else if (typeof root.define === 'function' && root.define.amd) {
         // AMD. Register as an anonymous module.
-        define(['b'], factory);
+        root.define(['b'], factory);
     } else {
         // Browser globals
         root.returnExports = factory(root.b);
