@@ -9,8 +9,8 @@
 // with a circular dependency, see commonjsAdapter.js
 
 // Help Node out by setting up define.
-if (typeof exports === 'object' && typeof define !== 'function') {
-    define = function (factory) {
+if (typeof module === 'object' && typeof define !== 'function') {
+    var define = function (factory) {
         module.exports = factory(require, exports, module);
     };
 }
