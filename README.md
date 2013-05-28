@@ -3,7 +3,7 @@
 The purpose of this repository is to formalize the work on UMDs - universal modules which can work anywhere, 
 be it in the client, on the server or anywhere else. This pattern typically attempts to offer compatibility with the most popular script loaders of the day (e.g RequireJS
 amongst others), and in many cases uses AMD as a base, with special-casing added to handle
-CommonJS compatability.
+CommonJS compatibility.
 
 To date, a number of UMD variations have been proposed, ranging from Kit-Cambridge's
 [UMD](https://gist.github.com/1251221), through to [patterns](https://github.com/addyosmani/jquery-plugin-patterns/issues/1) discussed by Addy Osmani, Thomas Davis and Ryan Florence and most recently
