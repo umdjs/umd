@@ -7,33 +7,37 @@
 // If you want something that will work in other stricter CommonJS environments,
 // or if you need to create a circular dependency, see commonJsStrictGlobal.js
 
-// Defines a module "returnExportsGlobal" that depends another module called
-// "b". Note that the name of the module is implied by the file name. It is
+// Defines a module "returnExportsGlobal" that depends other modules called
+// "a" and "b". Note that the name of the module is implied by the file name. It is
 // best if the file name and the exported global have matching names.
 
 // If the 'b' module also uses this type of boilerplate, then
 // in the browser, it will create a global .b that is used below.
 
-(function (root, factory) {
+(function (root, factory, deps, moduleName) {
     if (typeof exports === 'object') {
         // Node. Does not work with strict CommonJS, but
         // only CommonJS-like enviroments that support module.exports,
         // like Node.
-        module.exports = factory(require('b'));
+        module.exports = factory.apply(root,deps.map(function(dep) {
+                return require(dep);
+            }));
     } else if (typeof define === 'function' && define.amd) {
-        // AMD. Register as an anonymous module.
-        define(['b'], function (b) {
-            return (root.returnExportsGlobal = factory(b));
-        });
+        // AMD. Register as a 'moduleName' named module.
+        define(moduleName, deps, function() {
+                root[moduleName]=factory.apply(this,arguments);
+            }));
     } else {
         // Browser globals
-        root.returnExportsGlobal = factory(root.b);
+        root[moduleName] = factory.apply(root,deps.map(function(dep) {
+                return root[dep];
+            }));
     }
-}(this, function (b) {
-    //use b in some fashion.
+})(this, function (a, b) {
+    // use a or b in some fashion.
 
     // Just return a value to define the module export.
     // This example returns an object, but the module
     // can return a function as the exported value.
     return {};
-}));
+},['a','b'],'c');
