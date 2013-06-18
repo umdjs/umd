@@ -17,14 +17,14 @@
 // in the browser, it will create a global .b that is used below.
 
 (function (root, factory) {
-    if (typeof exports === 'object') {
-        // CommonJS
-        factory(exports, require('b'));
-    } else if (typeof define === 'function' && define.amd) {
+    if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
         define(['exports', 'b'], function (exports, b) {
             factory((root.commonJsStrictGlobal = exports), b);
         });
+    } else if (typeof exports === 'object') {
+        // CommonJS
+        factory(exports, require('b'));
     } else {
         // Browser globals
         factory((root.commonJsStrictGlobal = {}), root.b);
