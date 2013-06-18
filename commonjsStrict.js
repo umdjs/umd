@@ -17,12 +17,12 @@
 // the top function.
 
 (function (root, factory) {
-    if (typeof exports === 'object') {
-        // CommonJS
-        factory(exports, require('b'));
-    } else if (typeof define === 'function' && define.amd) {
+    if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
         define(['exports', 'b'], factory);
+    } else if (typeof exports === 'object') {
+        // CommonJS
+        factory(exports, require('b'));
     } else {
         // Browser globals
         factory((root.commonJsStrict = {}), root.b);

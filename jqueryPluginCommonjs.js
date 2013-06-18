@@ -7,12 +7,12 @@
 // not want to add the extra CommonJS detection.
 
 (function (factory) {
-    if (typeof exports === 'object') {
-        // Node/CommonJS
-        factory(require('jquery'));
-    } else if (typeof define === 'function' && define.amd) {
+    if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
         define(['jquery'], factory);
+    } else if (typeof exports === 'object') {
+        // Node/CommonJS
+        factory(require('jquery'));
     } else {
         // Browser globals
         factory(jQuery);
