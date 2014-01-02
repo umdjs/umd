@@ -10,7 +10,7 @@
 
 // Help Node out by setting up define.
 if (typeof exports === 'object' && typeof define !== 'function') {
-    define = function (factory) {
+    var define = function (factory) {
         factory(require, exports, module);
     };
 }
