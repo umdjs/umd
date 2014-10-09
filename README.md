@@ -57,6 +57,7 @@ is usable in AMD.
 
 * [docpad-plugin-umd](https://github.com/docpad/docpad-plugin-umd) is a [DocPad](http://docpad.org) plugin for surrounding JavaScript code with UMD boilerplate
 * [grunt-umd](https://github.com/alexlawrence/grunt-umd) is a [Grunt](http://gruntjs.com) task for surrounding JavaScript code with UMD boilerplate
+* [gulp-umd](https://github.com/eduardolundgren/gulp-umd) is a [Gulp](http://gulpjs.com/) task for surrounding JavaScript code with UMD boilerplate
 * [grunt-urequire](https://github.com/aearly/grunt-urequire) is a Grunt wrapper for [uRequire](https://github.com/anodynos/uRequire) a conversion tool for universal JavaScript modules.
 
 
