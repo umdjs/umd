@@ -87,3 +87,9 @@ The basic pattern for the UMD variations in this repository was derived from the
 
 Earlier UMD variations were also of influence, ranging from Kit-Cambridge's
 [UMD](https://gist.github.com/1251221), through to [patterns](https://github.com/addyosmani/jquery-plugin-patterns/issues/1) discussed by Addy Osmani, Thomas Davis and Ryan Florence and most recently the UMD patterns proposed by [James Burke](https://gist.github.com/1262861).
+
+### License
+
+Copyright (c) 2014 the UMD contributors
+
+Licensed under the [MIT License](https://github.com/umdjs/umd/blob/master/LICENSE.md).

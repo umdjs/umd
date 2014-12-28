@@ -1,0 +1,23 @@
+{
+  "name": "umdjs",
+  "version": "1.0.0",
+  "description": "UMD (Universal Module Definition)",
+  "main": "amdWeb.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/umdjs/umd"
+  },
+  "keywords": [
+    "umd",
+    "umdjs",
+    "universal",
+    "module",
+    "definition"
+  ],
+  "author": "The UMD Authors",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/umdjs/umd/issues"
+  },
+  "homepage": "https://github.com/umdjs/umd"
+}
