@@ -2,9 +2,6 @@
 
 // Similar to jqueryPlugin.js but also tries to
 // work in a CommonJS environment.
-// It is unlikely jQuery will run in a CommonJS
-// environment. See jqueryPlugin.js if you do
-// not want to add the extra CommonJS detection.
 
 (function (factory) {
     if (typeof define === 'function' && define.amd) {
