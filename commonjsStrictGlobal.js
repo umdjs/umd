@@ -9,7 +9,7 @@
 // circular dependency, then see returnExportsGlobal.js instead. It will allow
 // you to export a function as the module value.
 
-// Defines a module "commonJsStrictGlobal" that depends another module called
+// Defines a module "commonjsStrictGlobal" that depends another module called
 // "b". Note that the name of the module is implied by the file name. It is
 // best if the file name and the exported global have matching names.
 
@@ -17,17 +17,18 @@
 // in the browser, it will create a global .b that is used below.
 
 (function (root, factory) {
+    var moduleName = 'commonjsStrictGlobal';
     if (typeof define === 'function' && define.amd) {
-        // AMD. Register as an anonymous module.
-        define(['exports', 'b'], function (exports, b) {
-            factory((root.commonJsStrictGlobal = exports), b);
+        // AMD
+        define(moduleName, ['exports', 'b'], function (exports, b) {
+            factory((root[moduleName] = exports), b);
         });
     } else if (typeof exports === 'object') {
         // CommonJS
         factory(exports, require('b'));
     } else {
         // Browser globals
-        factory((root.commonJsStrictGlobal = {}), root.b);
+        factory((root[moduleName] = {}), root.b);
     }
 }(this, function (exports, b) {
     //use b in some fashion.

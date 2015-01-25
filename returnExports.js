@@ -15,9 +15,10 @@
 // the top function.
 
 (function (root, factory) {
+    var moduleName = 'returnExports';
     if (typeof define === 'function' && define.amd) {
-        // AMD. Register as an anonymous module.
-        define(['b'], factory);
+        // AMD
+        define(moduleName, ['b'], factory);
     } else if (typeof exports === 'object') {
         // Node. Does not work with strict CommonJS, but
         // only CommonJS-like environments that support module.exports,
@@ -25,7 +26,7 @@
         module.exports = factory(require('b'));
     } else {
         // Browser globals (root is window)
-        root.returnExports = factory(root.b);
+        root[moduleName] = factory(root.b);
     }
 }(this, function (b) {
     //use b in some fashion.
@@ -39,9 +40,10 @@
 
 // if the module has no dependencies, the above pattern can be simplified to
 (function (root, factory) {
+    var moduleName = 'returnExports';
     if (typeof define === 'function' && define.amd) {
-        // AMD. Register as an anonymous module.
-        define([], factory);
+        // AMD
+        define(moduleName, [], factory);
     } else if (typeof exports === 'object') {
         // Node. Does not work with strict CommonJS, but
         // only CommonJS-like environments that support module.exports,
@@ -49,7 +51,7 @@
         module.exports = factory();
     } else {
         // Browser globals (root is window)
-        root.returnExports = factory();
+        root[moduleName] = factory();
   }
 }(this, function () {
 
