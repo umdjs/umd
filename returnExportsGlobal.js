@@ -22,11 +22,11 @@
         });
     } else if (typeof exports === 'object') {
         // Node. Does not work with strict CommonJS, but
-        // only CommonJS-like enviroments that support module.exports,
+        // only CommonJS-like environments that support module.exports,
         // like Node.
         module.exports = factory(require('b'));
     } else {
-        // Browser globals
+        // Browser globals (root is window)
         root.returnExportsGlobal = factory(root.b);
     }
 }(this, function (b) {
@@ -48,11 +48,11 @@
         });
     } else if (typeof exports === 'object') {
         // Node. Does not work with strict CommonJS, but
-        // only CommonJS-like enviroments that support module.exports,
+        // only CommonJS-like environments that support module.exports,
         // like Node.
         module.exports = factory();
     } else {
-        // Browser globals
+        // Browser globals (root is window)
         root.returnExportsGlobal = factory();
     }
 }(this, function () {
