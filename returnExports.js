@@ -15,6 +15,7 @@
 // the top function.
 
 (function (root, factory) {
+    var name = 'returnExports';
     if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
         define(['b'], factory);
@@ -25,7 +26,7 @@
         module.exports = factory(require('b'));
     } else {
         // Browser globals (root is window)
-        root.returnExports = factory(root.b);
+        root[name] = factory(root.b);
     }
 }(this, function (b) {
     //use b in some fashion.
@@ -39,6 +40,7 @@
 
 // if the module has no dependencies, the above pattern can be simplified to
 (function (root, factory) {
+    var name = 'returnExports';
     if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
         define([], factory);
@@ -49,7 +51,7 @@
         module.exports = factory();
     } else {
         // Browser globals (root is window)
-        root.returnExports = factory();
+        root[name] = factory();
   }
 }(this, function () {
 

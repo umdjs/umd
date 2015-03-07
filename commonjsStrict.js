@@ -17,6 +17,7 @@
 // the top function.
 
 (function (root, factory) {
+    var name = 'commonJsStrict';
     if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
         define(['exports', 'b'], factory);
@@ -25,7 +26,7 @@
         factory(exports, require('b'));
     } else {
         // Browser globals
-        factory((root.commonJsStrict = {}), root.b);
+        factory((root[name] = {}), root.b);
     }
 }(this, function (exports, b) {
     //use b in some fashion.

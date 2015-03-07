@@ -15,10 +15,11 @@
 // in the browser, it will create a global .b that is used below.
 
 (function (root, factory) {
+    var name = 'returnExportsGlobal';
     if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
         define(['b'], function (b) {
-            return (root.returnExportsGlobal = factory(b));
+            return (root[name] = factory(b));
         });
     } else if (typeof exports === 'object') {
         // Node. Does not work with strict CommonJS, but
@@ -27,7 +28,7 @@
         module.exports = factory(require('b'));
     } else {
         // Browser globals
-        root.returnExportsGlobal = factory(root.b);
+        root[name] = factory(root.b);
     }
 }(this, function (b) {
     //use b in some fashion.
