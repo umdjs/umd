@@ -19,5 +19,12 @@
   "bugs": {
     "url": "https://github.com/umdjs/umd/issues"
   },
-  "homepage": "https://github.com/umdjs/umd"
+  "homepage": "https://github.com/umdjs/umd",
+  "scripts": {
+    "test": "npm ru lint",
+    "lint": "jshint *.js"
+  },
+  "devDependencies": {
+    "jshint": "^2.8.0"
+  }
 }
