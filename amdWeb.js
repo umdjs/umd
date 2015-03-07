@@ -16,12 +16,13 @@
 // the top function.
 
 (function (root, factory) {
+    var name = 'amdWeb';
     if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
         define(['b'], factory);
     } else {
         // Browser globals
-        root.amdWeb = factory(root.b);
+        root[name] = factory(root.b);
     }
 }(this, function (b) {
     //use b in some fashion.
