@@ -9,7 +9,7 @@
 // that has a circular dependency, see nodeAdapter.js
 
 // Help Node out by setting up define.
-if (typeof exports === 'object' && typeof define !== 'function') {
+if (typeof exports === 'object' && typeof exports.nodeName !== 'string' && typeof define !== 'function') {
     var define = function (factory) {
         factory(require, exports, module);
     };

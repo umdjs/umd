@@ -22,7 +22,7 @@
         define(['exports', 'b'], function (exports, b) {
             factory((root.commonJsStrictGlobal = exports), b);
         });
-    } else if (typeof exports === 'object') {
+    } else if (typeof exports === 'object' && typeof exports.nodeName !== 'string') {
         // CommonJS
         factory(exports, require('b'));
     } else {
