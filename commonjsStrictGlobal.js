@@ -16,7 +16,7 @@
 // If the 'b' module also uses this type of boilerplate, then
 // in the browser, it will create a global .b that is used below.
 
-(function (root, factory) {
+;(function (root, factory) {
     if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
         define(['exports', 'b'], function (exports, b) {

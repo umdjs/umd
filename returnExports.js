@@ -14,7 +14,7 @@
 // can remove the `root` use and the passing `this` as the first arg to
 // the top function.
 
-(function (root, factory) {
+;(function (root, factory) {
     if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
         define(['b'], factory);
@@ -38,7 +38,7 @@
 
 
 // if the module has no dependencies, the above pattern can be simplified to
-(function (root, factory) {
+;(function (root, factory) {
     if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
         define([], factory);
