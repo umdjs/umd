@@ -4,7 +4,7 @@
 // jQuery is not likely to run in those environments.
 // See jqueryPluginCommonJs.js for that version.
 
-(function (factory) {
+;(function (factory) {
     if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
         define(['jquery'], factory);
