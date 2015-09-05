@@ -24,8 +24,8 @@
         // like Node.
         module.exports = factory(require('b'));
     } else {
-        // Browser globals (root is window)
-        root.returnExports = factory(root.b);
+        // Environment global (Browsers, WSH, ASP)
+        returnExports = factory(root.b);
     }
 }(this, function (b) {
     //use b in some fashion.
