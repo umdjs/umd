@@ -17,8 +17,8 @@
     });
 
 }( // Help Node out by setting up define.
-     typeof module === 'object' && module.exports && typeof define !== 'function'
-    ? function (factory) { module.exports = factory(require, exports, module); }
-    : define
+    typeof module === 'object' && module.exports && typeof define !== 'function' ?
+    function (factory) { module.exports = factory(require, exports, module); } :
+    define
 ));
 
