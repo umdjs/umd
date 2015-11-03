@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/umdjs/umd",
   "scripts": {
-    "test": "npm ru lint",
+    "test": "npm run lint",
     "lint": "jshint *.js"
   },
   "devDependencies": {

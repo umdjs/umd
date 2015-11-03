@@ -12,7 +12,7 @@
                 // build a jQuery instance, we normalize how we use modules
                 // that require this pattern but the window provided is a noop
                 // if it's defined (how jquery works)
-                if ( window ) {
+                if ( typeof window !== 'undefined' ) {
                     jQuery = require('jquery');
                 }
                 else {
