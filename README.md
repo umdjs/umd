@@ -29,9 +29,6 @@ The UMD pattern typically attempts to offer compatibility with the most popular 
 
 * [jqueryPlugin.js](https://github.com/umdjs/umd/blob/master/jqueryPlugin.js) -
   Defines a jQuery plugin that works with AMD and browser globals.
-* [jqueryPluginCommonjs.js](https://github.com/umdjs/umd/blob/master/jqueryPluginCommonjs.js) -
-  Defines a jQuery plugin that works with AMD and browser globals, but also in
-  a CommonJS environment. Use this version if you are running jQuery (or the [jquip](https://github.com/mythz/jquip) or [jquery-untouched](https://npmjs.org/package/jquery-untouched) projects) in a CommonJS environment that can load jQuery appropriately.
 
 ####AMD with simple Node/CommonJS adapter
 
