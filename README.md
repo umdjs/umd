@@ -8,26 +8,26 @@ The UMD pattern typically attempts to offer compatibility with the most popular 
 
 ####Regular Module
 
-* [amdWeb.js](https://github.com/umdjs/umd/blob/master/amdWeb.js) -
+* [amdWeb.js](https://github.com/umdjs/umd/blob/master/templates/amdWeb.js) -
   Defines a module that works with AMD and browser globals. If you also want
   to export a global even when AMD is in play (useful if you are loading other
   scripts that still expect that global), use
-  [amdWebGlobal.js](https://github.com/umdjs/umd/blob/master/amdWebGlobal.js).
-* [returnExports.js](https://github.com/umdjs/umd/blob/master/returnExports.js) -
+  [amdWebGlobal.js](https://github.com/umdjs/umd/blob/master/templates/amdWebGlobal.js).
+* [returnExports.js](https://github.com/umdjs/umd/blob/master/templates/returnExports.js) -
   Defines a module that works in Node, AMD and browser globals. If you also want
   to export a global even when AMD is in play (useful if you are loading other
   scripts that still expect that global), use
-  [returnExportsGlobal.js](https://github.com/umdjs/umd/blob/master/returnExportsGlobal.js).
-* [commonjsStrict.js](https://github.com/umdjs/umd/blob/master/commonjsStrict.js) -
+  [returnExportsGlobal.js](https://github.com/umdjs/umd/blob/master/templates/returnExportsGlobal.js).
+* [commonjsStrict.js](https://github.com/umdjs/umd/blob/master/templates/commonjsStrict.js) -
   Defines a module that works with more CommonJS runtimes, and for modules that
   will have a circular dependency. If you also want
   to export a global even when AMD is in play (useful if you are loading other
   scripts that still expect that global), use
-  [commonjsStrictGlobal.js](https://github.com/umdjs/umd/blob/master/commonjsStrictGlobal.js)
+  [commonjsStrictGlobal.js](https://github.com/umdjs/umd/blob/master/templates/commonjsStrictGlobal.js)
 
 ####jQuery Plugin
 
-* [jqueryPlugin.js](https://github.com/umdjs/umd/blob/master/jqueryPlugin.js) -
+* [jqueryPlugin.js](https://github.com/umdjs/umd/blob/master/templates/jqueryPlugin.js) -
   Defines a jQuery plugin that works with AMD and browser globals.
 
 ####AMD with simple Node/CommonJS adapter
@@ -41,10 +41,10 @@ just basic JS module dependencies. It also does not support the
 [callback-style require](https://github.com/amdjs/amdjs-api/wiki/require) that
 is usable in AMD.
 
-* [nodeAdapter.js](https://github.com/umdjs/umd/blob/master/nodeAdapter.js) -
+* [nodeAdapter.js](https://github.com/umdjs/umd/blob/master/templates/nodeAdapter.js) -
   Best for when using AMD style but want it to work in Node without a helper library
   that sets up AMD.
-* [commonjsAdapter.js](https://github.com/umdjs/umd/blob/master/commonjsAdapter.js) -
+* [commonjsAdapter.js](https://github.com/umdjs/umd/blob/master/templates/commonjsAdapter.js) -
   Similar to nodeAdapter.js, but compatible with more CommonJS runtimes, and if
   you want to define a circular dependency.
 
