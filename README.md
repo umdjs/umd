@@ -87,6 +87,6 @@ Earlier UMD variations were also of influence, ranging from Kit-Cambridge's
 
 ### License
 
-Copyright (c) 2014 the UMD contributors
+Copyright (c) the UMD contributors
 
 Licensed under the [MIT License](https://github.com/umdjs/umd/blob/master/LICENSE.md).
