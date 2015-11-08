@@ -56,6 +56,7 @@ is usable in AMD.
 * [grunt-umd](https://github.com/alexlawrence/grunt-umd) is a [Grunt](http://gruntjs.com) task for surrounding JavaScript code with UMD boilerplate
 * [gulp-umd](https://github.com/eduardolundgren/gulp-umd) is a [Gulp](http://gulpjs.com/) task for surrounding JavaScript code with UMD boilerplate
 * [grunt-urequire](https://github.com/aearly/grunt-urequire) is a Grunt wrapper for [uRequire](https://github.com/anodynos/uRequire) a conversion tool for universal JavaScript modules.
+* [generator-umd](https://github.com/ruyadorno/generator-umd) is an Yeoman Generator that creates a single module project with UMD boilerplate
 
 
 #### Testing
