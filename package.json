@@ -1,6 +1,6 @@
 {
   "name": "umdjs",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "UMD (Universal Module Definition)",
   "main": "amdWeb.js",
   "repository": {
@@ -19,5 +19,15 @@
   "bugs": {
     "url": "https://github.com/umdjs/umd/issues"
   },
-  "homepage": "https://github.com/umdjs/umd"
+  "homepage": "https://github.com/umdjs/umd",
+  "scripts": {
+    "test": "npm run lint",
+    "lint": "jshint *.js"
+  },
+  "devDependencies": {
+    "jshint": "^2.8.0"
+  },
+  "dependencies": {
+    "jquery": "^2.1.4"
+  }
 }

@@ -1,0 +1,21 @@
+
+v2.0.0
+
+	* jQuery is now provided by only one template. This template normalizes how
+	  modules built with it are used in CommonJS environments:
+
+			require('./myJqueryPlugin')(window, [jQuery]);
+
+
+		Providing window is mandated. This is because jQuery upstream,
+
+			1. Sometimes returns a factory, and only sometimes.
+			2. We *always* have access to window.
+			3. It makes the use of window explicit.
+			4. If jQuery ever provides access to the factory we are forward-compatable.
+
+		For more information on this, read
+
+			* http://stackoverflow.com/q/33404108/124486
+			* https://github.com/umdjs/umd/issues/68
+	
