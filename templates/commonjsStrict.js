@@ -28,7 +28,7 @@
         factory((root.commonJsStrict = {}), root.b);
     }
 }(this, function (exports, b) {
-    //use b in some fashion.
+    // Use b in some fashion.
 
     // attach properties to the exports object to define
     // the exported module properties.

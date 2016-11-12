@@ -29,7 +29,7 @@
         root.amdWebGlobal = factory(root.b);
     }
 }(this, function (b) {
-    //use b in some fashion.
+    // Use b in some fashion.
 
     // Just return a value to define the module export.
     // This example returns an object, but the module
