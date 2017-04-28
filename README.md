@@ -1,4 +1,4 @@
-##UMD (Universal Module Definition)
+## UMD (Universal Module Definition)
 
 [![Build Status](https://travis-ci.org/umdjs/umd.svg)](https://travis-ci.org/umdjs/umd)
 
@@ -8,7 +8,7 @@ The UMD pattern typically attempts to offer compatibility with the most popular 
 
 ### Variations
 
-####Regular Module
+#### Regular Module
 
 * [amdWeb.js](https://github.com/umdjs/umd/blob/master/templates/amdWeb.js) -
   Defines a module that works with AMD and browser globals. If you also want
@@ -27,12 +27,12 @@ The UMD pattern typically attempts to offer compatibility with the most popular 
   scripts that still expect that global), use
   [commonjsStrictGlobal.js](https://github.com/umdjs/umd/blob/master/templates/commonjsStrictGlobal.js)
 
-####jQuery Plugin
+#### jQuery Plugin
 
 * [jqueryPlugin.js](https://github.com/umdjs/umd/blob/master/templates/jqueryPlugin.js) -
   Defines a jQuery plugin that works with AMD and browser globals.
 
-####AMD with simple Node/CommonJS adapter
+#### AMD with simple Node/CommonJS adapter
 
 These are useful for using AMD style while still making modules that can be
 used in Node and installed via npm without extra dependencies to set up the
