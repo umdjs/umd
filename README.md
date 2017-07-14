@@ -2,13 +2,13 @@
 
 [![Build Status](https://travis-ci.org/umdjs/umd.svg)](https://travis-ci.org/umdjs/umd)
 
-This repository formalizes the design and implementation of the Universal Module Definition (UMD) API for JavaScript modules. These are modules which are capable of working everywhere, be it in the client, on the server or elsewhere. 
+This repository formalizes the design and implementation of the Universal Module Definition (UMD) API for JavaScript modules. These are modules which are capable of working everywhere, be it in the client, on the server or elsewhere.
 
 The UMD pattern typically attempts to offer compatibility with the most popular script loaders of the day (e.g RequireJS amongst others). In many cases it uses [AMD](https://github.com/amdjs/amdjs-api/wiki/AMD) as a base, with special-casing added to handle [CommonJS](http://wiki.commonjs.org/wiki/CommonJS) compatibility.
 
 ### Variations
 
-####Regular Module
+#### Regular Module
 
 * [amdWeb.js](https://github.com/umdjs/umd/blob/master/templates/amdWeb.js) -
   Defines a module that works with AMD and browser globals. If you also want
@@ -27,12 +27,12 @@ The UMD pattern typically attempts to offer compatibility with the most popular 
   scripts that still expect that global), use
   [commonjsStrictGlobal.js](https://github.com/umdjs/umd/blob/master/templates/commonjsStrictGlobal.js)
 
-####jQuery Plugin
+#### jQuery Plugin
 
 * [jqueryPlugin.js](https://github.com/umdjs/umd/blob/master/templates/jqueryPlugin.js) -
   Defines a jQuery plugin that works with AMD and browser globals.
 
-####AMD with simple Node/CommonJS adapter
+#### AMD with simple Node/CommonJS adapter
 
 These are useful for using AMD style while still making modules that can be
 used in Node and installed via npm without extra dependencies to set up the
@@ -65,11 +65,11 @@ is usable in AMD.
 
 * [Unit testing UMD with grunt-contrib-jasmine](http://stackoverflow.com/questions/16940548/grunt-test-for-umd)
 
-###Resources
+### Resources
 
 * [Browserify and the Universal Module Definition](http://dontkry.com/posts/code/browserify-and-the-universal-module-definition.html)
 
-###Todos
+### Todos
 
 * noConflict. Although with AMD loaders and build tools, it should be possible to get version specific bindings,
   maybe show a version that has a noConflict option.
