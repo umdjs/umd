@@ -1,4 +1,4 @@
-##UMD (Universal Module Definition)
+## UMD (Universal Module Definition)
 
 [![Build Status](https://travis-ci.org/umdjs/umd.svg)](https://travis-ci.org/umdjs/umd)
 
