@@ -29,7 +29,7 @@
         // Browser globals
         factory((root.commonJsStrictGlobal = {}), root.b);
     }
-}(this, function (exports, b) {
+}(typeof window !== 'undefined' ? window : this, function (exports, b) {
     // Use b in some fashion.
 
     // attach properties to the exports object to define

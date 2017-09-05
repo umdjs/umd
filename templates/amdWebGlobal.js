@@ -28,7 +28,7 @@
         // Browser globals
         root.amdWebGlobal = factory(root.b);
     }
-}(this, function (b) {
+}(typeof window !== 'undefined' ? window : this, function (b) {
     // Use b in some fashion.
 
     // Just return a value to define the module export.
