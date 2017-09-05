@@ -1,4 +1,4 @@
-##UMD (Universal Module Definition)
+# UMD (Universal Module Definition)
 
 [![Build Status](https://travis-ci.org/umdjs/umd.svg)](https://travis-ci.org/umdjs/umd)
 
@@ -6,9 +6,9 @@ This repository formalizes the design and implementation of the Universal Module
 
 The UMD pattern typically attempts to offer compatibility with the most popular script loaders of the day (e.g RequireJS amongst others). In many cases it uses [AMD](https://github.com/amdjs/amdjs-api/wiki/AMD) as a base, with special-casing added to handle [CommonJS](http://wiki.commonjs.org/wiki/CommonJS) compatibility.
 
-### Variations
+## Variations
 
-#### Regular Module
+### Regular Module
 
 * [amdWeb.js](https://github.com/umdjs/umd/blob/master/templates/amdWeb.js) -
   Defines a module that works with AMD and browser globals. If you also want
@@ -27,12 +27,12 @@ The UMD pattern typically attempts to offer compatibility with the most popular 
   scripts that still expect that global), use
   [commonjsStrictGlobal.js](https://github.com/umdjs/umd/blob/master/templates/commonjsStrictGlobal.js)
 
-#### jQuery Plugin
+### jQuery Plugin
 
 * [jqueryPlugin.js](https://github.com/umdjs/umd/blob/master/templates/jqueryPlugin.js) -
   Defines a jQuery plugin that works with AMD and browser globals.
 
-#### AMD with simple Node/CommonJS adapter
+### AMD with simple Node/CommonJS adapter
 
 These are useful for using AMD style while still making modules that can be
 used in Node and installed via npm without extra dependencies to set up the
@@ -50,9 +50,9 @@ is usable in AMD.
   Similar to nodeAdapter.js, but compatible with more CommonJS runtimes, and if
   you want to define a circular dependency.
 
-### Tooling
+## Tooling
 
-#### Build tools
+### Build tools
 
 * [docpad-plugin-umd](https://github.com/docpad/docpad-plugin-umd) is a [DocPad](http://docpad.org) plugin for surrounding JavaScript code with UMD boilerplate
 * [grunt-umd](https://github.com/alexlawrence/grunt-umd) is a [Grunt](http://gruntjs.com) task for surrounding JavaScript code with UMD boilerplate
@@ -61,15 +61,15 @@ is usable in AMD.
 * [generator-umd](https://github.com/ruyadorno/generator-umd) is an Yeoman Generator that creates a single module project with UMD boilerplate
 
 
-#### Testing
+### Testing
 
 * [Unit testing UMD with grunt-contrib-jasmine](http://stackoverflow.com/questions/16940548/grunt-test-for-umd)
 
-### Resources
+## Resources
 
 * [Browserify and the Universal Module Definition](http://dontkry.com/posts/code/browserify-and-the-universal-module-definition.html)
 
-### Todos
+## Todos
 
 * noConflict. Although with AMD loaders and build tools, it should be possible to get version specific bindings,
   maybe show a version that has a noConflict option.
@@ -81,14 +81,14 @@ That is one of the strengths of module names, they can be mapped to different im
     * Further justifications for usage
     * Gotchas/custom-tweaks we're aware of, but would rather not apply to the default UMD boilerplate
 
-### Influences
+## Influences
 
 The basic pattern for the UMD variations in this repository was derived from the approach [@kriskowal](https://github.com/kriskowal) used for the [Q promise library](https://github.com/kriskowal/q).
 
 Earlier UMD variations were also of influence, ranging from Kit-Cambridge's
 [UMD](https://gist.github.com/1251221), through to [patterns](https://github.com/addyosmani/jquery-plugin-patterns/issues/1) discussed by Addy Osmani, Thomas Davis and Ryan Florence and most recently the UMD patterns proposed by [James Burke](https://gist.github.com/1262861).
 
-### License
+## License
 
 Copyright (c) the UMD contributors
 
