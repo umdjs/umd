@@ -23,7 +23,7 @@
         // Browser globals
         root.amdWeb = factory(root.b);
     }
-}(this, function (b) {
+}(typeof self !== 'undefined' ? self : this, function (b) {
     // Use b in some fashion.
 
     // Just return a value to define the module export.
