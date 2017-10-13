@@ -59,6 +59,7 @@ is usable in AMD.
 * [gulp-umd](https://github.com/eduardolundgren/gulp-umd) is a [Gulp](http://gulpjs.com/) task for surrounding JavaScript code with UMD boilerplate
 * [grunt-urequire](https://github.com/aearly/grunt-urequire) is a Grunt wrapper for [uRequire](https://github.com/anodynos/uRequire) a conversion tool for universal JavaScript modules.
 * [generator-umd](https://github.com/ruyadorno/generator-umd) is an Yeoman Generator that creates a single module project with UMD boilerplate
+* [webpack](https://github.com/webpack/webpack) is a bundler for javascript. [libraryTarget: "umd"](https://webpack.js.org/configuration/output/#module-definition-systems) is an option in webpack settings for generating UMD builds
 
 
 #### Testing
