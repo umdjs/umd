@@ -27,7 +27,7 @@
         // Browser globals (root is window)
         root.returnExports = factory(root.b);
     }
-}(typeof self !== 'undefined' ? self : this, function (b) {
+}(typeof self === 'undefined' ? this : self, function (b) {
     // Use b in some fashion.
 
     // Just return a value to define the module export.
