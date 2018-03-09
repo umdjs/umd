@@ -27,7 +27,7 @@
         // Browser globals
         factory((root.commonJsStrict = {}), root.b);
     }
-}(typeof self !== 'undefined' ? self : this, function (exports, b) {
+}(typeof self === 'undefined' ? this : self, function (exports, b) {
     // Use b in some fashion.
 
     // attach properties to the exports object to define
