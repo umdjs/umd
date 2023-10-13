@@ -4,7 +4,13 @@
 
 This repository formalizes the design and implementation of the Universal Module Definition (UMD) API for JavaScript modules. These are modules which are capable of working everywhere, be it in the client, on the server or elsewhere.
 
-The UMD pattern typically attempts to offer compatibility with the most popular script loaders of the day (e.g RequireJS amongst others). In many cases it uses [AMD](https://github.com/amdjs/amdjs-api/wiki/AMD) as a base, with special-casing added to handle [CommonJS](http://wiki.commonjs.org/wiki/CommonJS) compatibility.
+The UMD pattern typically attempts to offer compatibility with the most popular script loaders of the day (e.g RequireJS amongst others). The repository aims to formalize the *definition* of *universal modules*. It does not provide a *universal definition*. The standard was written at the time because everyone defined their universal modules differently - there were some common approaches, with varying support for different environments, but nothing really established.
+
+A universal module, as already noted, works in multiple environments. Before universal modules, libraries would distribute separate files for the different environments, e.g. `library.amd.js`, `library.common.js` and `library.global.js`. This was a hassle for maintainers, since it required the usage of a build tool (which JavaScript <s>does</s> did generally not need) and extra documentation. So the aim was to define a universal module, a single file, which was all that was needed for the author to write and distribute and for the user to (down)load. Notice this was before package managers and repositories were common (or: when they started to become more popular, and you had to change your library into a module to support them).
+
+Yet, there were still variations. Modules written for web browsers did not need to consider supporting the commonjs format, as they wouldn't work in Node.JS anyway. Modules that had no dependencies wouldn't need a UMD pattern that supported `require`. Modules that did not use circular dependencies wouldn't need a pattern that supports a mutable `exports` object. You can find the explanation of these differences, and their trade-offs, in the comments documenting the patterns below. A library author can read through them and pick the right one for their supported environments.
+
+In many cases, UMD uses [AMD](https://github.com/amdjs/amdjs-api/wiki/AMD) as a base, with special-casing added to handle [CommonJS](http://wiki.commonjs.org/wiki/CommonJS) compatibility.
 
 ### Variations
 
