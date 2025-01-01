@@ -1,6 +1,6 @@
 The MIT License (MIT)
 
-Copyright (c) 2014 the [UMD contributors](https://github.com/umdjs/umd/graphs/contributors).
+Copyright (c) 2025 the [UMD contributors](https://github.com/umdjs/umd/graphs/contributors).
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
